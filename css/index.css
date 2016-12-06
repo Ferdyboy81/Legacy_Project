@@ -34,6 +34,7 @@ body {
 
 .lacity-background {
   background-image: url("./../assets/DowntownLA.jpg");
+  back
 }
 
 .content-section {
@@ -93,7 +94,6 @@ body {
 
 #legacy-nav .nav-links .col {
   padding: 0;
-
 }
 
 #legacy-nav .social-media-icon img {
@@ -104,6 +104,7 @@ body {
 #lagacy-nav a {
   font-weight: 600;
 }
+
 
 /* Splash Video style */
 
@@ -148,9 +149,11 @@ body {
   margin-left: 50px;
   margin-right: 50px;
 }
+
 h5 {
   color: #1C3B73
 }
+
 
 /* Creativity Tools */
 
@@ -179,7 +182,7 @@ h5 {
 #contact-us .info-container {
   width: 80%;
   margin: auto;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, .8);
   border-radius: 13px;
 }
 
