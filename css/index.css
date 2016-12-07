@@ -130,7 +130,7 @@ body {
 #new-technology .row,
 #contact-us .row {
   margin: 0;
-  font-weight: 600;
+  font-weight: inherit;
 }
 
 
