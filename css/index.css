@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 *,
@@ -34,7 +34,7 @@ body {
 
 .lacity-background {
   background-image: url("./../assets/DowntownLA.jpg");
-  back
+  background-size: contain;
 }
 
 .content-section {
@@ -144,6 +144,7 @@ body {
 .about-legacy {
   text-align: center;
   font-size: 17px;
+  font-weight: initial;
   padding-top: 0;
   padding-bottom: 15px;
   margin-left: 50px;
@@ -153,6 +154,11 @@ body {
 h5 {
   color: #1C3B73
 }
+
+
+/*.aboutfont {
+  font-family: 'Merriweather', serif;
+}*/
 
 
 /* Creativity Tools */
@@ -171,19 +177,20 @@ h5 {
 /* Contact Us */
 
 #contact-us {
-  height: 500px;
+  height: 95%;
   width: 100%;
 }
 
 #contact-us h2 {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 #contact-us .info-container {
   width: 80%;
   margin: auto;
   background: rgba(0, 0, 0, .8);
-  border-radius: 13px;
+  border-radius: 45px;
 }
 
 #contact-us .info-container form input[type=text] {
@@ -191,3 +198,18 @@ h5 {
   border: none;
   height: 20px;
 }
+
+.lacity-background {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#address {
+  padding: 65px 4.75rem;
+  min-height: 1px;
+}
+
+
