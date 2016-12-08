@@ -187,16 +187,17 @@ h5 {
 }
 
 #contact-us .info-container {
-  width: 80%;
+  width: 75%;
   margin: auto;
   background: rgba(0, 0, 0, .8);
   border-radius: 45px;
+  min-height: 50%;
 }
 
 #contact-us .info-container form input[type=text] {
   background: #fff;
   border: none;
-  height: 20px;
+  height: 50px;
 }
 
 .lacity-background {
@@ -211,5 +212,28 @@ h5 {
   padding: 65px 4.75rem;
   min-height: 1px;
 }
+
+.btn-inverse {
+    color: #ffffff;
+    background-color: #34495e;
+}
+.btn {
+    border: none;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 4px;
+    padding: 10px 15px;
+    
+}
+
+.address {
+  margin-top: 60px;
+}
+
+
+
+
+
 
 
