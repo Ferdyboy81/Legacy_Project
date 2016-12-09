@@ -8,6 +8,7 @@
   <!-- CSS  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.css">
   <link href="./css/index.css" type="text/css" rel="stylesheet" />
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
@@ -19,7 +20,7 @@
   <nav id="legacy-nav" class="row">
     <div class="col s6 legacy-nav-logo">
       <a class="col offset-s1" href="splash-video">
-        <img src="assets/LGlogo.png" alt="legacy_logo">
+        <a href="#splash-video"><img src="assets/LGlogo.png" alt="legacy_logo"></a>
       </a>
     </div>
     <ul class="row col s6 nav-links">
@@ -67,12 +68,21 @@
     </ul>
   </nav>
   <!-- End of Navbar -->
+
+
   <!-- Splash Video -->
   <div id="splash-video">
     <video id="video" autoplay loop>
       <source src="assets/videos/vid.mp4" type="video/mp4">
     </video>
+    <div id="text-overlay">
+      <h1>Welcome to Legacy Games</h1>
+    </div>
+    <a href="#about-us"><span class="fui-triangle-down large"></span></a>
   </div>
+
+
+
   <!-- About Us Template -->
   <div id="about-us" class="white-waves content-section">
     <div class="col s12">
@@ -155,17 +165,14 @@
   <div id="contact-us" class="lacity-background">
     <h2><span style="color: white">CONTACT US</span></h2>
     <div id="address" class="row info-container">
-
       <div class="col s5">
         <span style="color: white; font-size: 20px; text-align: left">
         <p class="address">933 S. Broadway Suite 1162 Los Angeles, CA 90007 USA</p>
-        <p>213.895.7600</p></span>
+        <br>
+        213.895.7600</span>
       </div>
-
       <div class="col s7">
         <p><span style="color: white; font-size: 30px; float:left">Email Us!</span></p>
-        <br>
-
         <form class="contact-form">
           <div class="input-field">
             <input type="text" class="validate" placeholder="Name">
@@ -179,12 +186,10 @@
           <div class="input-field">
             <input type="text" id="message" class="validate" placeholder="Message">
           </div>
-          <input type="submit" class="btn btn-inverse" name="submit">Submit</button>
+          <input type="submit" id="submit-button" class="btn btn-inverse" name="submit">Submit</button>
         </form>
-
-    </div>
-
-    <script src="js/index.js"></script>
+      </div>
+      <script src="js/index.js"></script>
 </body>
 
 </html>

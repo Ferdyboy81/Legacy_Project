@@ -5,7 +5,7 @@
   var video = document.getElementById('video');
 
   function changeNavbarStyle() {
-    if (body.scrollTop < 5) {
+    if (body.scrollTop < 100) {
       navbar.className = 'row'
     } else {
       navbar.className = 'row show'
