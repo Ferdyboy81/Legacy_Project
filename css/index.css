@@ -76,6 +76,7 @@ body {
 #legacy-nav .legacy-nav-logo a {
   height: 100%;
   display: block;
+  text-align: center;
 }
 
 #legacy-nav .legacy-nav-logo img {
