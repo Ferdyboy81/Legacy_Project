@@ -56,6 +56,7 @@ body {
 
 #legacy-nav {
   position: fixed;
+  margin: 0;
   top: 0;
   background: none; /* default background: transparent */
   z-index: 1;
@@ -85,8 +86,9 @@ body {
 }
 
 #legacy-nav .nav-links a{
-  padding: 0 5px;
+  padding: 0 10px;
   color: #fff;
+  text-align: center;
   transition: all .5s;
 }
 
@@ -102,7 +104,12 @@ body {
 #legacy-nav .nav-links .col {
   padding: 0;
 }
-
+#legacy-nav .social-media-icon a {
+  padding: 0px 7px;
+}
+#legacy-nav .social-media-icon ul {
+  float: right;
+}
 #legacy-nav .social-media-icon img {
   height: 20px;
   vertical-align: middle;
@@ -111,7 +118,13 @@ body {
 #lagacy-nav a {
   font-weight: 100;
 }
-
+/* if screen is smaller than 875px */
+@media screen and (max-width: 875px) {
+  ul.nav-links,
+  .social-media-icon {
+    display: none;
+  }
+}
 
 /* Splash Video style */
 
