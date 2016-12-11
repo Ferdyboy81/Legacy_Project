@@ -5,10 +5,10 @@
   var video = document.getElementById('video');
 
   function changeNavbarStyle() {
-    if (body.scrollTop < 100) {
-      navbar.className = 'row'
+    if (body.scrollTop < 100) { // if scroll less than 100px nav fades away
+      navbar.className = 'row' // navbar fades
     } else {
-      navbar.className = 'row show'
+      navbar.className = 'row show' // creates new class
     }
   };
 
