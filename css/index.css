@@ -37,10 +37,14 @@ a:hover {
   background-image: url("./../assets/DowntownLA.jpg");
   background-size: contain;
 }
+.white-waves.content-section , 
+.blue-waves.content-section {
+  height: auto;
+  min-height: 362px;
+  padding: 25px 0 0;
+}
 
 .content-section {
-  height: 362px;
-  padding: 25px 0 0;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -324,7 +328,13 @@ a:hover {
 }
 
 
-/* STYLES FOR PAGE SECTION */
+
+/* 
+* --------------------
+*     Page Sections 
+* --------------------
+*/
+
 .content-section h2 {
   margin: 0
 }
@@ -334,10 +344,9 @@ a:hover {
 }
 
 
-
 /* 
 * ------------------
-*     About US 
+*     About Us 
 * ------------------
 */
 
@@ -358,68 +367,45 @@ h5 {
 * ------------------------
 */
 
-/* Creativity Tools */
 
 #creativity-tools {}
 
-#match-3 {
-}
+#match-3 {}
 
+/* 
+* --------------------
+*     Contact Us 
+* --------------------
+*/
 
-/* Contact Us */
 
 #contact-us {
+  height: 700px;
+  background-size: cover;
+  color: #fff;
 }
 
-#contact-us .info-container {
-  width: 75%;
+#contact-us .contact-us-bg {
   margin: auto;
   background: rgba(0, 0, 0, .8);
-  border-radius: 45px;
-  min-height: 50%;
+}
+#contact-us .contact-us-bg,
+#contact-us .info-container{
+  width: 100%;
+  height: 100%;
+}
+#contact-us .info-container > * {
+  width: 50%;
+  float: left;
+}
+#contact-us .info-container .input-field {
+  width: 80%;
+  height: 40px;
+  margin: 5px auto;
+}
+#contact-us .info-container input,
+#contact-us .info-container textarea {
+  width: 100%;
+  height: 100%;
 }
 
-#contact-us .info-container form input[type=text] {
-  background: #fff;
-  border: none;
-  height: 50px;
-  font-size: 25px;
-}
-
-.lacity-background {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#address {
-  padding: 65px 4.75rem;
-  min-height: 1px;
-}
-
-.btn-inverse {
-  color: #ffffff;
-  background-color: #34495e;
-}
-
-.btn {
-  border: none;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.4;
-  border-radius: 4px;
-  padding: 10px 15px;
-  cursor: pointer;
-  letter-spacing: 5px;
-  float: right;
-}
-
-#submit-button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #FFF;
-}
-
-.address {
-  margin-top: 100px;
-}
