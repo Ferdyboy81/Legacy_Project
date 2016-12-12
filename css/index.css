@@ -11,17 +11,13 @@ body {
   box-sizing: border-box;
 }
 
+
+/*components*/
+
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
-
-
-/*components*/
-
-.feature-imgs.row .col {
-  padding: 0;
 }
 
 .white-waves {
@@ -47,84 +43,130 @@ body {
   background-attachment: fixed;
 }
 
-.content-section h2 {
-  margin: 0 0 25px;
-}
-
 
 /*nav bar styles*/
 
-#legacy-nav {
+#legacy-navbar {
+  width: 100%;
+  height: 75px;
   position: fixed;
   margin: 0;
   top: 0;
-  background: none; /* default background: transparent */
+  background: none;
+  /* default background: transparent */
   z-index: 1;
   box-shadow: none;
   transition: all .5s;
-
 }
 
-#legacy-nav.show {
-  background: #fff; /*change background to white */
+#legacy-navbar.show {
+  background: #fff;
+  /*change background to white */
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
-#legacy-nav .legacy-nav-logo {
+#legacy-navbar .legacy-navbar-container {
+  width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
-#legacy-nav .legacy-nav-logo a {
+#legacy-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#legacy-navbar ul li {
+  float: left;
+}
+#legacy-navbar .legacy-navbar-links {
+  width: 70%;
+  padding: 27px 0px;
+  float: right;
+}
+#legacy-navbar .social-media{
+  float: right;
+}
+#legacy-navbar .legacy-navbar-logo,
+#legacy-navbar .legacy-sections {
+  float: left;
+}
+
+#legacy-navbar .legacy-navbar-logo {
+  height: 100%;
+  width: 30%;
+}
+
+#legacy-navbar .legacy-navbar-logo a {
+  width: 100%;
   height: 100%;
   display: block;
   text-align: center;
+  background-image: url(../assets/LGlogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
 }
 
-#legacy-nav .legacy-nav-logo img {
-  height: 85%;
-  vertical-align: middle;
-}
-
-#legacy-nav .nav-links a{
+#legacy-navbar .legacy-sections a {
   padding: 0 10px;
   color: #fff;
   text-align: center;
   transition: all .5s;
 }
 
-#legacy-nav.show .nav-links a{
+#legacy-navbar.show .legacy-sections a {
   color: #144B9E;
 }
 
-#legacy-nav .nav-links a:hover {
+#legacy-navbar .legacy-sections a:hover {
   text-decoration: underline;
   background: none;
 }
 
-#legacy-nav .nav-links .col {
+#legacy-navbar .legacy-sections .col {
   padding: 0;
 }
-#legacy-nav .social-media-icon a {
+
+#legacy-navbar .social-media a {
   padding: 0px 7px;
 }
-#legacy-nav .social-media-icon ul {
+
+#legacy-navbar .social-media ul {
   float: right;
 }
-#legacy-nav .social-media-icon img {
+
+#legacy-navbar .social-media img {
   height: 20px;
   vertical-align: middle;
 }
 
-#lagacy-nav a {
+#legacy-navbar a {
   font-weight: 100;
 }
-/* if screen is smaller than 875px */
-@media screen and (max-width: 875px) {
-  ul.nav-links,
-  .social-media-icon {
+
+/* if screen is larger than 1200px */
+@media screen and (min-width: 1200px) {
+  #legacy-navbar .legacy-navbar-container {
+    width: 85%;
+  }
+}
+
+/* if screen is smaller than 910px */
+
+@media screen and (max-width: 910px) {
+
+  #legacy-navbar .legacy-navbar-logo a {
+    background-image: url(../assets/mainlogo.png);
+  }
+  ul.legacy-sections,
+  .social-media {
     display: none;
   }
 }
+
 
 /* Splash Video style */
 
@@ -173,7 +215,6 @@ body {
 }
 
 
-
 /* triangle scroll down */
 
 .large {
@@ -187,9 +228,11 @@ body {
 
 
 /* Google Play icon */
+
 #google-play {
   width: 20%;
 }
+
 
 /* About US */
 
