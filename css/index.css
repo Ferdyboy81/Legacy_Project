@@ -15,6 +15,7 @@ body {
 
 /*components*/
 
+/* use on parent container of floated items */
 .clearfix:after {
   content: "";
   display: table;
@@ -35,13 +36,37 @@ body {
 }
 
 .content-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: 362px;
+  padding: 25px 0 0;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.image-container {
+  width: 100%;
+}
+.image-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.image-container >  *{
+  float: left;
+}
+.image-container .two-columns{
+  width: 50%;
+}
+.image-container .three-columns{
+  width: 33.333333%;
+}
+.image-container .four-columns{
+  width: 25%;
+}
+.image-container img{
+  width: 100%;
 }
 
 
@@ -225,16 +250,6 @@ body {
   z-index: -1;
 }
 
-#about-us .row,
-#creativity-tools .row,
-#match-3 .row,
-#endless-run .row,
-#new-technology .row,
-#contact-us .row {
-  margin: 0;
-  font-weight: inherit;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -245,7 +260,6 @@ body {
 
 #text-overlay {
   font-size: 3em;
-  /*display: flex;*/
   text-align: center;
   justify-content: center;
   color: white;
@@ -273,7 +287,22 @@ body {
 }
 
 
-/* About US */
+/* STYLES FOR PAGE SECTION */
+.content-section h2 {
+  margin: 0
+}
+
+.content-section p {
+  margin-top: 0
+}
+
+
+
+/* 
+* ------------------
+*     About US 
+* ------------------
+*/
 
 #about-us {
   text-align: center;
@@ -295,34 +324,23 @@ h5 {
 }
 
 
-/*.aboutfont {
-  font-family: 'Merriweather', serif;
-}*/
-
+/* 
+* ------------------------
+*     Creativity Tools 
+* ------------------------
+*/
 
 /* Creativity Tools */
 
-#creativity-tools {
-  text-align: center;
-}
+#creativity-tools {}
 
 #match-3 {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 
 /* Contact Us */
 
 #contact-us {
-  height: 145%;
-  width: 100%;
-}
-
-#contact-us h2 {
-  text-align: center;
-  padding-bottom: 20px;
 }
 
 #contact-us .info-container {
