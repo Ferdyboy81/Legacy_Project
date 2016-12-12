@@ -4,6 +4,7 @@ body {
   width: 100%;
   position: relative;
   font-family: 'Merriweather', serif;
+  font-size: 16px;
 }
 
 *,
@@ -12,7 +13,9 @@ body {
   box-sizing: border-box;
 }
 
-
+a:hover {
+  text-decoration: none;
+}
 /*components*/
 
 /* use on parent container of floated items */
@@ -143,19 +146,34 @@ body {
   transition: none;
 }
 
-#legacy-navbar .legacy-mobile-menu {
+#legacy-navbar .legacy-mobile-on-button {
   width: 20%;
   height: 100%;
   float: right;
+  position: relative;
   text-align: center;
   padding: 10px;
   display: none;
 }
-#legacy-navbar .legacy-mobile-menu svg {
+#legacy-navbar .legacy-mobile-on-button svg {
+  width: 100%;
   height: 100%;
   fill: #fff;
 }
-
+#legacy-navbar .legacy-mobile-off-button {
+  width: 20%;
+  height: 75px;
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+#legacy-navbar .legacy-mobile-off-button svg {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
 #legacy-navbar .legacy-sections a {
   padding: 0 10px;
   color: #fff;
@@ -166,11 +184,6 @@ body {
 
 #legacy-navbar.show .legacy-sections a {
   color: #144B9E;
-}
-
-#legacy-navbar .legacy-sections a:hover {
-  text-decoration: underline;
-  background: none;
 }
 
 #legacy-navbar .social-media a {
@@ -207,7 +220,7 @@ body {
     overflow: hidden;
   }
   #legacy-navbar .legacy-navbar-logo a {
-    background-image: url(../assets/mainlogo.png);
+    /*background-image: url(../assets/mainlogo.png);*/
   }
   #legacy-navbar .legacy-navbar-links {
     width: 100vw;
@@ -217,26 +230,57 @@ body {
     top: 0;
     right: 100%;
     float: none;
-    background: rgba(0, 0, 0, 0.89);
+    background: rgba(0, 0, 0, 0.95);
     transition: all .2s;
   }
   #legacy-navbar .legacy-navbar-links.active {
     right: 0;
   }
-  #legacy-navbar .legacy-mobile-menu {
+  #legacy-navbar .legacy-mobile-on-button {
     display: block;
   }
-  #legacy-navbar.show .legacy-mobile-menu svg{
+  #legacy-navbar.show .legacy-mobile-on-button svg{
     fill: #000;
+  }
+  #legacy-navbar .legacy-mobile-off-button {
+    display: block;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections {
+    width: 100%;
+    float: none;
+    margin: 75px 0 0;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li:hover {
+    background-color: #000;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li a{
+    display: inline-block;
+    padding: 40px 0;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  #legacy-navbar .legacy-navbar-links .social-media {
+    float: none;
   }
 }
 
+@media screen and (max-width: 750px) {
+  #legacy-navbar .legacy-navbar-logo a {
+    background-image: url(../assets/mainlogo.png);
+  }
+}
 
 /* Splash Video style */
 
 #splash-video {
   height: 100% !important;
-  max-height: 950px;
+  max-height: 1200px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -250,21 +294,14 @@ body {
   z-index: -1;
 }
 
-.overlay {
+.splash-section-overlay {
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  color: white;
-}
-
-#text-overlay {
-  font-size: 3em;
+  top: 50%;
+  left: 50%;
   text-align: center;
-  justify-content: center;
   color: white;
-  margin-top: 250px;
-  text-shadow: 2px 5px rgb(33, 85, 162)
+  transform: translate(-50%, -50%);
 }
 
 
@@ -305,18 +342,9 @@ body {
 */
 
 #about-us {
-  text-align: center;
-  font-family: 'Kanit', sans-serif;
 }
 
 .about-legacy {
-  text-align: center;
-  font-size: 17px;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 15px;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 h5 {

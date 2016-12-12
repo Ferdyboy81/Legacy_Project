@@ -2,11 +2,12 @@
   var body = document.getElementsByTagName('body')[0];
   var navbar = document.getElementById('legacy-navbar');
   var navbarLinks = document.getElementsByClassName('legacy-navbar-links')[0];
-  var mobileMenuButton = document.getElementsByClassName('legacy-mobile-menu')[0];
+  var mobileMenuOnButton = document.getElementsByClassName('legacy-mobile-on-button')[0];
+  var mobileMenuOffButton = document.getElementsByClassName('legacy-mobile-off-button')[0];
   var videoContainer = document.getElementById('splash-video');
   var video = document.getElementById('video');
 
-  var mobileLinkActive = false;
+  var mobileNavigationActive = false;
   var currentScrollTop = 0;
   var lastScrollTop = 0;
 
@@ -25,20 +26,32 @@
   };
 
   function openMobileNavigation() {
-    if(!mobileLinkActive) {
+    if(!mobileNavigationActive) {
       body.className = 'stopScrolling';
       navbarLinks.className = "legacy-navbar-links active"
-      mobileLinkActive = true;
+      mobileNavigationActive = true;
     } else {
       body.className = '';
       navbarLinks.className = "legacy-navbar-links"
-      mobileLinkActive = false;
+      mobileNavigationActive = false;
     }
   };
 
+  function closeMobileNavigation() {
+    if(mobileNavigationActive) {
+      body.className = '';
+      navbarLinks.className = "legacy-navbar-links"
+      mobileNavigationActive = false;
+    } else {
+      body.className = 'stopScrolling';
+      navbarLinks.className = "legacy-navbar-links active"
+      mobileNavigationActive = true;
+    }
+  }
+
   // video resize
   function stretchVideo() {
-    if(window.innerWidth/window.innerHeight < 1.3){
+    if(window.innerWidth/window.innerHeight < 1.7 ){
       video.style.height = '100%';
       video.style.width = 'auto';
     } else {
@@ -50,7 +63,8 @@
   stretchVideo();
   changeNavbarStyle();
 
-  mobileMenuButton.addEventListener("click", openMobileNavigation);
+  mobileMenuOnButton.addEventListener("click", openMobileNavigation);
+  mobileMenuOffButton.addEventListener("click", closeMobileNavigation);
   window.addEventListener("scroll", changeNavbarStyle);
   window.addEventListener("resize", stretchVideo);
 
