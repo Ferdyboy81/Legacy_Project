@@ -8,6 +8,7 @@
 
   var mobileLinkActive = false;
   var currentScrollTop = 0;
+  var lastScrollTop = 0;
 
   function changeNavbarStyle() {
     currentScrollTop = body.scrollTop;
