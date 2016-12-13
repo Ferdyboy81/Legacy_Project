@@ -16,9 +16,13 @@ body {
 a:hover {
   text-decoration: none;
 }
+
+
 /*components*/
 
+
 /* use on parent container of floated items */
+
 .clearfix:after {
   content: "";
   display: table;
@@ -37,7 +41,8 @@ a:hover {
   background-image: url("./../assets/DowntownLA.jpg");
   background-size: contain;
 }
-.white-waves.content-section , 
+
+.white-waves.content-section,
 .blue-waves.content-section {
   height: auto;
   min-height: 362px;
@@ -55,24 +60,30 @@ a:hover {
 .image-container {
   width: 100%;
 }
+
 .image-container:after {
   content: "";
   display: table;
   clear: both;
 }
-.image-container >  *{
+
+.image-container > * {
   float: left;
 }
-.image-container .two-columns{
+
+.image-container .two-columns {
   width: 50%;
 }
-.image-container .three-columns{
+
+.image-container .three-columns {
   width: 33.333333%;
 }
-.image-container .four-columns{
+
+.image-container .four-columns {
   width: 25%;
 }
-.image-container img{
+
+.image-container img {
   width: 100%;
 }
 
@@ -91,7 +102,9 @@ a:hover {
   transition: all .5s;
 }
 
+
 /*change background to white */
+
 #legacy-navbar.show {
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -159,11 +172,13 @@ a:hover {
   padding: 10px;
   display: none;
 }
+
 #legacy-navbar .legacy-mobile-on-button svg {
   width: 100%;
   height: 100%;
   fill: #fff;
 }
+
 #legacy-navbar .legacy-mobile-off-button {
   width: 20%;
   height: 75px;
@@ -172,12 +187,14 @@ a:hover {
   right: 0;
   padding: 10px;
 }
+
 #legacy-navbar .legacy-mobile-off-button svg {
   fill: #fff;
   width: 100%;
   height: 100%;
   padding: 10px 0;
 }
+
 #legacy-navbar .legacy-sections a {
   padding: 0 10px;
   color: #fff;
@@ -243,7 +260,7 @@ a:hover {
   #legacy-navbar .legacy-mobile-on-button {
     display: block;
   }
-  #legacy-navbar.show .legacy-mobile-on-button svg{
+  #legacy-navbar.show .legacy-mobile-on-button svg {
     fill: #000;
   }
   #legacy-navbar .legacy-mobile-off-button {
@@ -254,7 +271,7 @@ a:hover {
     float: none;
     margin: 75px 0 0;
   }
-  #legacy-navbar .legacy-navbar-links .legacy-sections li{
+  #legacy-navbar .legacy-navbar-links .legacy-sections li {
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -262,7 +279,7 @@ a:hover {
   #legacy-navbar .legacy-navbar-links .legacy-sections li:hover {
     background-color: #000;
   }
-  #legacy-navbar .legacy-navbar-links .legacy-sections li a{
+  #legacy-navbar .legacy-navbar-links .legacy-sections li a {
     display: inline-block;
     padding: 40px 0;
     font-size: 2rem;
@@ -279,6 +296,7 @@ a:hover {
     background-image: url(../assets/mainlogo.png);
   }
 }
+
 
 /* Splash Video style */
 
@@ -324,14 +342,13 @@ a:hover {
 /* Google Play icon */
 
 #google-play {
-  width: 20%;
+  width: 15%;
 }
 
 
-
-/* 
+/*
 * --------------------
-*     Page Sections 
+*     Page Sections
 * --------------------
 */
 
@@ -344,40 +361,41 @@ a:hover {
 }
 
 
-/* 
+/*
 * ------------------
-*     About Us 
+*     About Us
 * ------------------
 */
 
 #about-us {
+  text-align: center;
+  font-size: 20px;
 }
 
-.about-legacy {
-}
+.about-legacy {}
 
 h5 {
   color: #1C3B73
+  font-size: 23px;
 }
 
 
-/* 
+/*
 * ------------------------
-*     Creativity Tools 
+*     Creativity Tools
 * ------------------------
 */
-
 
 #creativity-tools {}
 
 #match-3 {}
 
-/* 
+
+/*
 * --------------------
-*     Contact Us 
+*     Contact Us
 * --------------------
 */
-
 
 #contact-us {
   height: 700px;
@@ -389,23 +407,26 @@ h5 {
   margin: auto;
   background: rgba(0, 0, 0, .8);
 }
+
 #contact-us .contact-us-bg,
-#contact-us .info-container{
+#contact-us .info-container {
   width: 100%;
   height: 100%;
 }
+
 #contact-us .info-container > * {
   width: 50%;
   float: left;
 }
+
 #contact-us .info-container .input-field {
   width: 80%;
   height: 40px;
   margin: 5px auto;
 }
+
 #contact-us .info-container input,
 #contact-us .info-container textarea {
   width: 100%;
   height: 100%;
 }
-
