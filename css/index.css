@@ -46,7 +46,8 @@ a:hover {
 }
 
 .white-waves.content-section,
-.blue-waves.content-section, about-cover1.content-section {
+.blue-waves.content-section,
+about-cover1.content-section {
   height: auto;
   min-height: 362px;
   padding: 25px 0 0;
@@ -175,10 +176,6 @@ a:hover {
   transition: none;
 }
 
-
-
-
-
 #legacy-navbar .legacy-mobile-on-button {
   width: 20%;
   height: 100%;
@@ -222,7 +219,6 @@ a:hover {
 #legacy-navbar.show .legacy-sections a {
   color: #144B9E;
 }
-
 
 #legacy-navbar .social-media a {
   padding: 0px 7px;
@@ -383,6 +379,10 @@ a:hover {
 * ------------------
 */
 
+#about-us {
+  background-color: rgba(26, 100, 198, 0.2);
+}
+
 #about-us h5 {
   text-align: center;
   font-size: 30px;
@@ -445,23 +445,25 @@ a:hover {
 }
 
 .six-columns img {
-  border-radius: 10px;
+  border-radius: 51px;
+  border: 2px solid #3678ad;
+  background: #fff;
   filter: gray;
   filter: grayscale(1);
-
-  -webkit-filter:grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 
-.six-columns img:hover{
+.six-columns img:hover {
   filter: none;
-
   -webkit-filter: grayscale(0);
 }
 
+
+/*
 .six-columns .color-img {
   filter: none;
 }
-
+*/
 
 
 /*
@@ -504,5 +506,3 @@ a:hover {
   width: 50%;
   height: 100%;
 }
-
-
