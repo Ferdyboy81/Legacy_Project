@@ -64,18 +64,9 @@ p {
 }
 
 .white-waves.content-section,
-<<<<<<< HEAD
-.blue-waves.content-section,
-about-cover1.content-section {
-  height: auto;
-  min-height: 362px;
-  padding: 25px 0 0;
-  margin-top: -22px;
-  margin-bottom: 18px;
-=======
+
 .blue-waves.content-section {
   padding: 35px 0 0;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
 }
 
 .content-section {
@@ -479,20 +470,8 @@ about-cover1.content-section {
 */
 
 #about-us {
-<<<<<<< HEAD
-  background-color: rgba(26, 100, 198, 0.2);
-}
-
-#about-us h5 {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 0px;
-  margin-bottom: 45px;
-  padding-top: 85px;
-=======
   padding: 75px 0;
   background-attachment: initial;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
 }
 
 #about-us .mission-statement p {
@@ -526,25 +505,15 @@ about-cover1.content-section {
   background: gray;
 }
 
-<<<<<<< HEAD
-.six-columns img {
-  border-radius: 51px;
-  border: 2px solid #3678ad;
-  background: #fff;
-=======
 #partners-section img {
   border-radius: 10px;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
   filter: gray;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
 
-<<<<<<< HEAD
-.six-columns img:hover {
 =======
 #partners-section img:hover {
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
   filter: none;
   -webkit-filter: grayscale(0);
 }
@@ -620,8 +589,7 @@ about-cover1.content-section {
   width: 80%;
   height: 100%;
 }
-<<<<<<< HEAD
-=======
+
 
 #contact-us .info-container .submit-button {
   width: 80%;
@@ -635,4 +603,3 @@ about-cover1.content-section {
   border-radius: 13px;
   padding: 10px 30px;
 }
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
