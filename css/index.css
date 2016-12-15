@@ -56,7 +56,7 @@ p {
 }
 
 .blue-green-gradient {
-  background-image: url("./../assets/about-cover1.jpg");
+  background-image: url("./../assets/about-background.jpg");
 }
 
 .lacity-background {
@@ -64,18 +64,17 @@ p {
 }
 
 .white-waves.content-section,
-<<<<<<< HEAD
 .blue-waves.content-section,
 about-cover1.content-section {
   height: auto;
   min-height: 362px;
   padding: 25px 0 0;
   margin-top: -22px;
-  margin-bottom: 18px;
-=======
+
+}
+
 .blue-waves.content-section {
   padding: 35px 0 0;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
 }
 
 .content-section {
@@ -87,12 +86,14 @@ about-cover1.content-section {
 }
 
 .content-section .section-header {
+  padding-top: 38px;
   padding-bottom: 35px;
 }
 
 .content-section .section-header h2 {
   font-size: 2.8rem;
   margin: 0;
+
 }
 
 .content-section .section-header p {
@@ -136,7 +137,7 @@ about-cover1.content-section {
     width: 20%;
   }
   .image-container .six-lg {
-    width: 16.666666%;
+    width: 33.333333%;
   }
 }
 
@@ -272,7 +273,7 @@ about-cover1.content-section {
   height: 100%;
   display: block;
   text-align: center;
-  background-image: url(../assets/LGlogo.png);
+  background-image: url(../assets/LGlogo-white.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -357,7 +358,7 @@ about-cover1.content-section {
   body.stopScrolling {
     overflow: hidden;
   }
-  #legacy-navbar.slide-up{
+  #legacy-navbar.slide-up {
     top: 0;
   }
   #legacy-navbar .legacy-navbar-links {
@@ -479,27 +480,29 @@ about-cover1.content-section {
 */
 
 #about-us {
-<<<<<<< HEAD
   background-color: rgba(26, 100, 198, 0.2);
+  padding-bottom: 85px;
 }
 
-#about-us h5 {
+#about-us {
   text-align: center;
   font-size: 30px;
   margin-top: 0px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
   padding-top: 85px;
-=======
   padding: 75px 0;
   background-attachment: initial;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
 }
 
 #about-us .mission-statement p {
-  width: 80%;
+  width: 100%;
   font-size: 1.2rem;
-  color: #2c2c2c;
+  color: #000;
   margin: 10px auto;
+}
+
+.mission-statement a {
+  text-decoration: none;
 }
 
 
@@ -511,8 +514,13 @@ about-cover1.content-section {
 
 #creativity-tools,
 #match-3,
-#endless-runner {
+#endless-runner,
+#partners-section {
   color: #1775BF;
+}
+
+#services {
+  color: #fff;
 }
 
 
@@ -522,39 +530,26 @@ about-cover1.content-section {
 * ------------------------
 */
 
-#partners-section h2 {
-  background: gray;
-}
-
-<<<<<<< HEAD
 .six-columns img {
   border-radius: 51px;
   border: 2px solid #3678ad;
   background: #fff;
-=======
+}
+
 #partners-section img {
   border-radius: 10px;
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
   filter: gray;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
 
-<<<<<<< HEAD
-.six-columns img:hover {
-=======
+.six-columns img:hover {}
+
 #partners-section img:hover {
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
   filter: none;
   -webkit-filter: grayscale(0);
 }
 
-
-/*
-.six-columns .color-img {
-  filter: none;
-}
-*/
 
 /*
 * --------------------
@@ -602,11 +597,12 @@ about-cover1.content-section {
     width: 80%;
     margin: auto;
   }
-
 }
 
 #contact-us .info-container .address-info p {
   font-size: 1.5rem;
+  text-align: left;
+  padding-left: 45px;
 }
 
 #contact-us .info-container .input-field {
@@ -620,8 +616,6 @@ about-cover1.content-section {
   width: 80%;
   height: 100%;
 }
-<<<<<<< HEAD
-=======
 
 #contact-us .info-container .submit-button {
   width: 80%;
@@ -630,9 +624,30 @@ about-cover1.content-section {
 }
 
 #contact-us .info-container .submit-button button {
-  background-color: #0f4040;
+  background-color: #34495E;
   border: none;
   border-radius: 13px;
   padding: 10px 30px;
+  color: #fff;
 }
->>>>>>> a3a73fdda20cff155ad7f029aac60f132c642e92
+
+/*
+* --------------------
+*     footer Section
+* --------------------
+*/
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #262932;
+  bottom: 0;
+  left: 0;
+  color: #E1E1E1;
+  text-align: center;
+  z-index: 0;
+}
+
+footer p {
+  padding: 1em 4em;
+}
