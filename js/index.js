@@ -11,15 +11,20 @@
   var currentScrollTop = 0;
   var lastScrollTop = 0;
 
+  // get Y-coordinates 
+  function getY() {
+    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  }
+
   function changeNavbarStyle() {
-    currentScrollTop = body.scrollTop;
-    if (body.scrollTop < 100) { // if scroll less than 100px nav fades away
+    currentScrollTop = getY();
+    if (currentScrollTop < (window.innerHeight - (window.innerHeight * .25))) { // if scroll less than the value, the nav fades away
       navbar.className = '' // navbar fades
     } else {
       navbar.className = 'show' // creates new class
     }
 
-    if (body.scrollTop > 600 && currentScrollTop > lastScrollTop) {
+    if (currentScrollTop > window.innerHeight && currentScrollTop > lastScrollTop) {
       navbar.className = 'show slide-up'
     }
     lastScrollTop = currentScrollTop;
@@ -59,6 +64,7 @@
       video.style.height = 'auto';
     }
   }
+
 
   stretchVideo();
   changeNavbarStyle();

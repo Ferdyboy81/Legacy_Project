@@ -205,6 +205,7 @@ p {
   background: none;
   z-index: 1;
   box-shadow: none;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
@@ -214,7 +215,6 @@ p {
 #legacy-navbar.show {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-
 }
 
 #legacy-navbar.slide-up {
@@ -267,15 +267,13 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: none;
+  -webkit-transition: background .5s;
+  transition: background .5s;
 }
 
 #legacy-navbar.show .legacy-navbar-logo a {
   background-image: url(../assets/LGlogo.png)
 }
-
-
-
 
 #legacy-navbar .legacy-mobile-on-button {
   width: 20%;
@@ -315,11 +313,31 @@ p {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  transition: all .5s;
+  -webkit-transition: color 1s;
+  transition: color 1s;
 }
-
+#legacy-navbar .legacy-sections .mail-icon a{
+  width: 50px;
+  display: block;
+  height: 18px;
+  position: relative;
+}
+#legacy-navbar .legacy-sections .mail-icon svg{
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  fill: #fff;
+  transition: all 1s;
+}
 #legacy-navbar.show .legacy-sections a {
   color: #144B9E;
+}
+#legacy-navbar.show .legacy-sections .mail-icon svg {
+  fill: #144B9E;
 }
 
 #legacy-navbar .social-media a {
@@ -367,7 +385,8 @@ p {
     right: 100%;
     float: none;
     background: rgba(0, 0, 0, 0.95);
-    transition: all .2s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
   #legacy-navbar .legacy-navbar-links.active {
     right: 0;
@@ -403,6 +422,9 @@ p {
   #legacy-navbar .legacy-navbar-links .legacy-sections li a:hover {
     color: #fff;
   }
+  #legacy-navbar .legacy-sections .mail-icon svg{
+    height: 50px;
+  }
   #legacy-navbar .legacy-navbar-links .social-media {
     width: 275px;
     display: inline-block;
@@ -420,7 +442,8 @@ p {
 /* if screen is smaller than 750px */
 
 @media screen and (max-width: 750px) {
-  #legacy-navbar .legacy-navbar-logo a {
+  #legacy-navbar .legacy-navbar-logo a,
+  #legacy-navbar.show .legacy-navbar-logo a {
     background-image: url(../assets/mainlogo.png);
   }
 }
@@ -440,7 +463,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -451,7 +475,8 @@ p {
   left: 50%;
   text-align: center;
   color: white;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .splash-section-slogan h1 {
@@ -524,7 +549,8 @@ p {
 
 #partners-section img {
   border-radius: 10px;
-  filter: gray;
+  -webkit-filter: gray;
+          filter: gray;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
