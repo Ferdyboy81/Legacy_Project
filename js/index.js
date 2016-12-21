@@ -1,3 +1,5 @@
+'use strict';
+
 (function (){
   var body = document.getElementsByTagName('body')[0];
   var navbar = document.getElementById('legacy-navbar');

@@ -234,24 +234,39 @@ p {
 }
 .hover-content .game-description {
   height: 40%;
-  padding: 0 5px;
 }
 .hover-content .game-description p{
   line-height: 1.2;
   font-size: 0.9rem;
   display: table-cell;
   vertical-align: middle;
+  padding: 0 10px;
 }
 .hover-content .game-platforms {
   width: 80%;
   height: 45%;
   margin: auto;
 }
-.hover-content .game-platforms img{
+.hover-content .game-platforms > *{
   width: 50%;
   float: left;
 }
-
+.hover-content .game-platforms a {
+  width: 80%;
+  display: block;
+  margin: 5%;
+}
+.hover-content .game-platforms > div:nth-child(1) a,
+.hover-content .game-platforms > div:nth-child(3) a{
+  margin-left: 15%;
+}
+.hover-content .game-platforms > div:nth-child(2) a,
+.hover-content .game-platforms > div:nth-child(4) a {
+  margin-right: 15%: 
+}
+.hover-content .game-platforms img {
+  display: block;
+}
 /*nav bar styles*/
 
 #legacy-navbar {
