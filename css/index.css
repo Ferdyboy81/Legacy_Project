@@ -126,7 +126,7 @@ p {
     width: 20%;
   }
   .image-container .six-lg {
-    width: 16.666666%;
+    width: 33.333333%;
   }
 }
 
@@ -548,16 +548,27 @@ p {
 }
 
 #partners-section img {
-  border-radius: 10px;
-  -webkit-filter: gray;
-          filter: gray;
+  filter: gray;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
 
+.six-columns img:hover {}
+
 #partners-section img:hover {
   filter: none;
   -webkit-filter: grayscale(0);
+}
+
+.six-lg img {
+  width: 150px;
+  height: 145px;
+  margin: 0;
+  cursor: pointer;
+}
+
+div.six-lg {
+  width: 320px;
 }
 
 
@@ -613,6 +624,8 @@ p {
 
 #contact-us .info-container .address-info p {
   font-size: 1.5rem;
+  text-align: left;
+  padding-left: 45px;
 }
 
 #contact-us .info-container .input-field {
@@ -627,6 +640,11 @@ p {
   height: 100%;
 }
 
+/*  message placeholder height*/
+#contact-us .info-container .form-container .input-field .email-input {
+  height: 200px;
+  line-height: 3.15;
+}
 
 #contact-us .info-container .submit-button {
   width: 80%;
@@ -639,7 +657,12 @@ p {
   border: none;
   border-radius: 13px;
   padding: 10px 30px;
+  margin-top: 165px;
   color: #fff;
+  letter-spacing: 3px;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*
