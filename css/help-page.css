@@ -328,6 +328,13 @@ p {
   text-align: center;
 }
 
+.col-md-12 col-xs-12 col-lg-12 {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+
+
 h2 {
   color: #000/*#1775BF*/;
 }
