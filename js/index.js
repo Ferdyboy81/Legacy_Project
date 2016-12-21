@@ -6,6 +6,7 @@
   var navbarLinks = document.getElementsByClassName('legacy-navbar-links')[0];
   var mobileMenuOnButton = document.getElementsByClassName('legacy-mobile-on-button')[0];
   var mobileMenuOffButton = document.getElementsByClassName('legacy-mobile-off-button')[0];
+  var mobileNavbarLinks = document.querySelectorAll('.legacy-sections a');
   var videoContainer = document.getElementById('splash-video');
   var video = document.getElementById('video');
 
@@ -20,13 +21,13 @@
 
   function changeNavbarStyle() {
     currentScrollTop = getY();
-    if (currentScrollTop < (window.innerHeight - (window.innerHeight * .25))) { // if scroll less than the value, the nav fades away
+    if (currentScrollTop < 300) { // if scroll less than the value, the nav fades away
       navbar.className = '' // navbar fades
     } else {
       navbar.className = 'show' // creates new class
     }
 
-    if (currentScrollTop > window.innerHeight && currentScrollTop > lastScrollTop) {
+    if (currentScrollTop > (window.innerHeight + 300) && currentScrollTop > lastScrollTop) {
       navbar.className = 'show slide-up'
     }
     lastScrollTop = currentScrollTop;
@@ -42,9 +43,14 @@
       navbarLinks.className = "legacy-navbar-links"
       mobileNavigationActive = false;
     }
+    
+    for (var i = mobileNavbarLinks.length - 1; i >= 0; i--) {
+      mobileNavbarLinks[i].onclick = closeMobileNavigation;
+    }
   };
 
   function closeMobileNavigation() {
+    console.log('ss');
     if(mobileNavigationActive) {
       body.className = '';
       navbarLinks.className = "legacy-navbar-links"
@@ -55,6 +61,9 @@
       mobileNavigationActive = true;
     }
   }
+
+
+
 
   // video resize
   function stretchVideo() {

@@ -207,11 +207,13 @@ p {
   display: block;
   position: absolute;
   opacity: 0;
+  visibility: hidden;
   color: #fff;
   transition: all .5s;
 }
 .hover-items:hover .hover-container {
   opacity: 1;
+  visibility: visible;
 }
 .hover-content{
   height: 100%;
@@ -442,7 +444,7 @@ p {
 
 /* if screen is smaller than 910px */
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 950px) {
   body.stopScrolling {
     overflow: hidden;
   }
