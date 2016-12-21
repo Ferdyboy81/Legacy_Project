@@ -207,11 +207,13 @@ p {
   display: block;
   position: absolute;
   opacity: 0;
+  visibility: hidden;
   color: #fff;
   transition: all .5s;
 }
 .hover-items:hover .hover-container {
   opacity: 1;
+  visibility: visible;
 }
 .hover-content{
   height: 100%;
