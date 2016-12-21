@@ -634,8 +634,8 @@ p {
 }
 
 #partners-section .three-lg img {
-  width: 150px;
-  height: 145px;
+  width: 70%;     /* adjust the width on any screen size */
+  max-width: 150px;
   margin: 0;
   cursor: pointer;
 }
