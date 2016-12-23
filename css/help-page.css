@@ -55,7 +55,7 @@ p {
 
 
 .content-section {
-  text-align: center;
+  text-align: left;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -314,47 +314,12 @@ p {
 * --------------------
 */
 
-#help-page .section-header {
-  margin-top: 50px;
-}
 
-
-.content-topics * {
-  text-decoration: none;
-  line-height: 1.5;
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-}
-
-.col-md-12 col-xs-12 col-lg-12 {
-  padding-right: 100px;
-  padding-left: 100px;
-}
-
-
-
-h2 {
-  color: #000/*#1775BF*/;
-}
-
-
-hr {
-  width: 500px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-
-
-.instructions {
-  text-align: left ;
-}
-
-#help-page .white-waves content-section {
+.container .row .{
   text-align: left;
 }
+
+
 
 
 

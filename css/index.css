@@ -555,7 +555,7 @@ p {
 }
 
 .splash-section-slogan h1 {
-  font-size: 4.2rem;
+  font-size: 5.2rem;
   margin: 0;
 }
 
@@ -801,9 +801,25 @@ footer {
   color: #E1E1E1;
   text-align: center;
   z-index: 0;
+  overflow: none;
 }
 
 footer p {
-  padding: 1em 4em;
+  padding: 1em 2em;
 }
 
+@media screen and (min-width: 350px) {
+  footer {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 9999999px) {
+  footer {
+    width: 100%;
+    height: 60px;
+  }
+
+
+}
