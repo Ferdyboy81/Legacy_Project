@@ -1,3 +1,162 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 910px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+
+/*
+* ----------------
+*    Components
+* ----------------
+*/
+
+.clearfix:after {
+  /* use on parent container of floated items */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.white-waves {
+  background-image: url("./../assets/Background-1.jpg");
+}
+
+.blue-waves {
+  background-image: url("./../assets/Background-2.jpg");
+}
+
+.blue-green-gradient {
+  background-image: url("./../assets/about-cover1.jpg");
+}
+
+.lacity-background {
+  background-image: url("./../assets/DowntownLA.jpg");
+}
+
+.grid-row {
+  float: left;
+}
+
+.grid-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 9999999px) {
+  .one-lg {
+    width: 100%;
+  }
+  .two-lg {
+    width: 50%;
+  }
+  .three-lg {
+    width: 33.333333%;
+  }
+  .four-lg {
+    width: 25%;
+  }
+  .five-lg {
+    width: 20%;
+  }
+  .six-lg {
+    width: 16.666666%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .one-md {
+    width: 100%;
+  }
+  .two-md {
+    width: 50%;
+  }
+  .three-md {
+    width: 33.333333%;
+  }
+  .four-md {
+    width: 25%;
+  }
+  .five-md {
+    width: 20%;
+  }
+  .six-md {
+    width: 16.666666%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .one-sm {
+    width: 100%;
+  }
+  .two-sm {
+    width: 50%;
+  }
+  .three-sm {
+    width: 33.333333%;
+  }
+  .four-sm {
+    width: 25%;
+  }
+  .five-sm {
+    width: 20%;
+  }
+  .six-sm {
+    width: 16.666666%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .one-xs {
+    width: 100%;
+  }
+  .two-xs {
+    width: 50%;
+  }
+  .three-xs {
+    width: 33.333333%;
+  }
+  .four-xs {
+    width: 25%;
+  }
+  .five-xs {
+    width: 20%;
+  }
+  .six-xs {
+    width: 16.666666%;
+  }
+}
+
 /*nav bar styles*/
 
 #legacy-navbar {
@@ -7,12 +166,15 @@
   margin: 0;
   top: 0;
   z-index: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+
+/*change background to white */
 
 
 #legacy-navbar .legacy-navbar-container {
@@ -63,7 +225,6 @@
   background-position: center;
   -webkit-transition: background .5s;
   transition: background .5s;
-
 }
 
 
@@ -80,7 +241,7 @@
 #legacy-navbar .legacy-mobile-on-button svg {
   width: 100%;
   height: 100%;
-  fill: #fff;
+  fill: #000;
 }
 
 #legacy-navbar .legacy-mobile-off-button {
@@ -102,11 +263,11 @@
 
 #legacy-navbar .legacy-sections a {
   padding: 0 10px;
+  color: #144B9E;
   text-align: center;
   text-decoration: none;
   -webkit-transition: color 1s;
   transition: color 1s;
-  color: #144B9E;
 }
 
 #legacy-navbar .legacy-sections .mail-icon a {
@@ -129,23 +290,46 @@
 }
 
 
-
-
 #legacy-navbar .social-media a {
   padding: 0px 7px;
+  display: inline-block;
 }
 
 #legacy-navbar .social-media ul {
   float: right;
 }
 
-#legacy-navbar .social-media img {
+#legacy-navbar .social-media svg {
   height: 20px;
-  vertical-align: middle;
+}
+
+#legacy-navbar #wordpress-icon {
+  fill: #00769D;
+}
+
+#legacy-navbar #facebook-icon {
+  fill: #475993;
+}
+
+#legacy-navbar #youtube-icon {
+  fill: #F61C0D;
+}
+
+#legacy-navbar #twitter-icon {
+  fill: #76A9EA;
+}
+
+#legacy-navbar #linkedin-icon {
+  fill: #0077B7;
+}
+
+#legacy-navbar .social-media svg {
+  fill: #fff;
+  transition: 1s;
 }
 
 #legacy-navbar a {
-  font-weight: 100;
+  font-weight: 500;
 }
 
 
@@ -153,7 +337,7 @@
 
 @media screen and (min-width: 1200px) {
   #legacy-navbar .legacy-navbar-container {
-    width: 85%;
+    width: 95%;
   }
 }
 
@@ -181,9 +365,6 @@
   }
   #legacy-navbar .legacy-mobile-on-button {
     display: block;
-  }
-  #legacy-navbar .legacy-mobile-on-button svg {
-    fill: #000;
   }
   #legacy-navbar .legacy-mobile-off-button {
     display: block;
@@ -221,7 +402,7 @@
     right: 0;
     margin: auto;
   }
-  #legacy-navbar .legacy-navbar-links .social-media img {
+  #legacy-navbar .legacy-navbar-links .social-media svg {
     height: 40px;
   }
 }
@@ -230,29 +411,21 @@
 /* if screen is smaller than 750px */
 
 @media screen and (max-width: 750px) {
-  #legacy-navbar .legacy-navbar-logo a{
+  #legacy-navbar .legacy-navbar-logo a {
     background-image: url(../assets/mainlogo.png);
   }
 }
 
 
-
-
 /*
-* --------------------
+* -----------------------
 *     Help Page Section
-* --------------------
+* -----------------------
 */
 
-
-.container .row .{
-  text-align: left;
+.help-page-container {
+  padding-top: 75px;
 }
-
-
-
-
-
 
 
 /*
