@@ -535,7 +535,7 @@ p {
 }
 #legacy-navbar .social-media svg {
   fill: #fff;
-  transition: .5s;
+  transition: 1s;
 }
 
 #legacy-navbar a {
