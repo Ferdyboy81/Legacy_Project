@@ -50,7 +50,6 @@
   };
 
   function closeMobileNavigation() {
-    console.log('ss');
     if(mobileNavigationActive) {
       body.className = '';
       navbarLinks.className = "legacy-navbar-links"
