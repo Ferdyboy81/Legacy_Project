@@ -244,30 +244,59 @@
 * --------------------
 */
 
+
 .container {
   background-image: url("./../assets/Background-1.jpg");
 }
 
 .white-waves {
   background: #fff;
-  width: 50%;
-  padding-top: 90px;
+  width: 60%;
   margin: 0 auto;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  padding-top: 15px;
 
 }
 
- h1, h4 {
+
+ .container h1 {
   color: #1775BF;
   text-align: center;
-  line-height: 3.7px;
+  padding-top: 100px;
+  font-size: 50px;
+  margin-bottom: -20px;
+}
 
+.container h4 {
+  color: #1775BF;
+  text-align: center;
+  font-size: 22px;
 
+}
+
+.topic-contents a {
+  text-decoration: none;
+  font-size: 23px;
+  color: black;
+}
+
+.topic-contents a:hover{
+  color: #1775BF;
 }
 
 .clear {
-  text-align: center;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.clear a {
+  text-decoration: none;
+  color: #007DA6;
+  font-weight: 550;
 }
 
 
@@ -276,7 +305,9 @@
 
 }
 
-
+.content-info {
+  padding-top: 50px;
+}
 
 /*
 * --------------------
