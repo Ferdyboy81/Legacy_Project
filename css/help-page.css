@@ -1,3 +1,38 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 910px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
 /*nav bar styles*/
 
 #legacy-navbar {
@@ -48,7 +83,7 @@
 }
 
 #legacy-navbar .legacy-navbar-logo {
-  height: 80%;
+  height: 100%;
   width: 30%;
 }
 
@@ -62,8 +97,7 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: background .5s;
-  transition: background .5s;
-
+  transition: background .5s;ß
 }
 
 
@@ -127,8 +161,6 @@
   fill: #144B9E;
   transition: all 1s;
 }
-
-
 
 
 #legacy-navbar .social-media a {
@@ -330,3 +362,21 @@ footer {
 footer p {
   padding: 1em 4em;
 }
+
+
+/* target offset */
+
+a[name] {
+   position: relative;
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+}
+a[name]:before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: 0;
+  right: 0;
+}
+

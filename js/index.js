@@ -61,9 +61,6 @@
     }
   }
 
-
-
-
   // video resize
   function stretchVideo() {
     if(window.innerWidth/window.innerHeight < 1.7 ){
@@ -74,7 +71,6 @@
       video.style.height = 'auto';
     }
   }
-
 
   stretchVideo();
   changeNavbarStyle();
