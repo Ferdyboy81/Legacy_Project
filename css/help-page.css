@@ -244,14 +244,37 @@
 * --------------------
 */
 
+.container {
+  background-image: url("./../assets/Background-1.jpg");
+}
 
-.container .row .{
+.white-waves {
+  background: #fff;
+  width: 50%;
+  padding-top: 90px;
+  margin: 0 auto;
   text-align: left;
+  padding-left: 20px;
+
+}
+
+ h1, h4 {
+  color: #1775BF;
+  text-align: center;
+  line-height: 3.7px;
+
+
+}
+
+.clear {
+  text-align: center;
 }
 
 
+.help-contents {
+  text-decoration: none;
 
-
+}
 
 
 
