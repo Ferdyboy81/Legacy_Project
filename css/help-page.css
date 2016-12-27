@@ -33,6 +33,7 @@ p {
   margin: 0;
 }
 
+
 /*nav bar styles*/
 
 #legacy-navbar {
@@ -48,7 +49,6 @@ p {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   font-family: 'Merriweather', serif;
 }
-
 
 #legacy-navbar .legacy-navbar-container {
   width: 100%;
@@ -97,9 +97,9 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: background .5s;
-  transition: background .5s;ß
+  transition: background .5s;
+  ß
 }
-
 
 #legacy-navbar .legacy-mobile-on-button {
   width: 20%;
@@ -161,7 +161,6 @@ p {
   fill: #144B9E;
   transition: all 1s;
 }
-
 
 #legacy-navbar .social-media a {
   padding: 0px 7px;
@@ -262,12 +261,10 @@ p {
 /* if screen is smaller than 750px */
 
 @media screen and (max-width: 750px) {
-  #legacy-navbar .legacy-navbar-logo a{
+  #legacy-navbar .legacy-navbar-logo a {
     background-image: url(../assets/mainlogo.png);
   }
 }
-
-
 
 
 /*
@@ -275,7 +272,6 @@ p {
 *     Help Page Section
 * --------------------
 */
-
 
 .container {
   background-image: url("./../assets/Background-1.jpg");
@@ -289,11 +285,9 @@ p {
   padding-left: 10px;
   font-size: 20px;
   padding-top: 15px;
-
 }
 
-
- .container h1 {
+.container h1 {
   color: #1775BF;
   text-align: center;
   padding-top: 100px;
@@ -305,7 +299,6 @@ p {
   color: #1775BF;
   text-align: center;
   font-size: 22px;
-
 }
 
 .topic-contents a {
@@ -314,7 +307,7 @@ p {
   color: black;
 }
 
-.topic-contents a:hover{
+.topic-contents a:hover {
   color: #1775BF;
 }
 
@@ -331,15 +324,65 @@ p {
   font-weight: 550;
 }
 
-
 .help-contents {
   text-decoration: none;
-
 }
 
 .content-info {
   padding-top: 50px;
 }
+
+@media screen and (max-width: 600px) {
+  .white-waves {
+    background: #fff;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 9px;
+  }
+  .container h1 {
+    color: #1775BF;
+    text-align: center;
+    padding-top: 55px;
+    font-size: 20px;
+    margin-bottom: -10px;
+  }
+  .container h4 {
+    color: #1775BF;
+    text-align: center;
+    font-size: 8px;
+  }
+  .topic-contents a {
+    text-decoration: none;
+    font-size: 9px;
+    color: black;
+  }
+  .topic-contents a:hover {
+    color: #1775BF;
+  }
+  .clear {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 7px;
+    text-decoration: none;
+  }
+  .clear a {
+    text-decoration: none;
+    color: #007DA6;
+    font-weight: 550;
+  }
+  .help-contents {
+    text-decoration: none;
+  }
+  .content-info {
+    padding-top: 25px;
+  }
+  footer p {
+    padding: 0em 3em;
+    font-size: 9px;
+  }
+}
+
 
 /*
 * --------------------
@@ -367,11 +410,12 @@ footer p {
 /* target offset */
 
 a[name] {
-   position: relative;
-   -webkit-background-clip: padding-box;
-   -moz-background-clip: padding;
-   background-clip: padding-box;
+  position: relative;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
+
 a[name]:before {
   content: "";
   position: absolute;
@@ -379,4 +423,3 @@ a[name]:before {
   left: 0;
   right: 0;
 }
-
