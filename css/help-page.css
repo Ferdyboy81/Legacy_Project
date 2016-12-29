@@ -282,7 +282,7 @@ p {
 
 /*
 * ----------------
-*     Help Page 
+*     Help Page
 * ----------------
 */
 
@@ -321,6 +321,8 @@ p {
 .topic-contents p a {
   font-size: 1.3rem;
   color: black;
+  text-decoration: none;
+  line-height: 1.5;
 }
 
 .topic-contents a:hover {
