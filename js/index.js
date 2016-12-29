@@ -1,6 +1,6 @@
 'use strict';
 
-(function (){
+function init(page) {
   var body = document.getElementsByTagName('body')[0];
   var navbar = document.getElementById('legacy-navbar');
   var navbarLinks = document.getElementsByClassName('legacy-navbar-links')[0];
@@ -10,6 +10,7 @@
   var videoContainer = document.getElementById('splash-video');
   var video = document.getElementById('video');
 
+  var legacyPage = page;
   var mobileNavigationActive = false;
   var currentScrollTop = 0;
   var lastScrollTop = 0;
@@ -19,22 +20,24 @@
     return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   }
 
-  function changeNavbarStyle() {
-    currentScrollTop = getY();
-    if (currentScrollTop < 300) { // if scroll less than the value, the nav fades away
-      navbar.className = '' // navbar fades
-    } else {
-      navbar.className = 'show' // creates new class
-    }
+  function changeNavbarStyle(page) {
+    if (page === 'index') {
+      currentScrollTop = getY();
+      if (currentScrollTop < 300) { // if scroll less than the value, the nav fades away
+        navbar.className = '' // navbar fades
+      } else {
+        navbar.className = 'show' // creates new class
+      }
 
-    if (currentScrollTop > (window.innerHeight + 300) && currentScrollTop > lastScrollTop) {
-      navbar.className = 'show slide-up'
+      if (currentScrollTop > (window.innerHeight + 300) && currentScrollTop > lastScrollTop) {
+        navbar.className = 'show slide-up'
+      }
+      lastScrollTop = currentScrollTop;
     }
-    lastScrollTop = currentScrollTop;
   };
 
   function openMobileNavigation() {
-    if(!mobileNavigationActive) {
+    if (!mobileNavigationActive) {
       body.className = 'stopScrolling';
       navbarLinks.className = "legacy-navbar-links active"
       mobileNavigationActive = true;
@@ -43,14 +46,14 @@
       navbarLinks.className = "legacy-navbar-links"
       mobileNavigationActive = false;
     }
-    
+
     for (var i = mobileNavbarLinks.length - 1; i >= 0; i--) {
       mobileNavbarLinks[i].onclick = closeMobileNavigation;
     }
   };
 
   function closeMobileNavigation() {
-    if(mobileNavigationActive) {
+    if (mobileNavigationActive) {
       body.className = '';
       navbarLinks.className = "legacy-navbar-links"
       mobileNavigationActive = false;
@@ -63,7 +66,7 @@
 
   // video resize
   function stretchVideo() {
-    if(window.innerWidth/window.innerHeight < 1.7 ){
+    if (window.innerWidth / window.innerHeight < 1.7) {
       video.style.height = '100%';
       video.style.width = 'auto';
     } else {
@@ -72,13 +75,19 @@
     }
   }
 
-  stretchVideo();
-  changeNavbarStyle();
+  changeNavbarStyle(legacyPage);
 
   mobileMenuOnButton.addEventListener("click", openMobileNavigation);
   mobileMenuOffButton.addEventListener("click", closeMobileNavigation);
-  window.addEventListener("scroll", changeNavbarStyle);
-  window.addEventListener("resize", stretchVideo);
+  // window.addEventListener("scroll", changeNavbarStyle);
+  window.addEventListener("scroll", function() {
+    changeNavbarStyle(legacyPage);
+  });
 
-}
-)();
+  // run only when user is on index/main page
+  if (page === 'index') {
+    stretchVideo();
+    window.addEventListener("resize", stretchVideo);
+  };
+
+};

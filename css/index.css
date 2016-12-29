@@ -4,9 +4,12 @@ body {
   width: 100%;
   position: relative;
   font-family: 'Merriweather', serif;
-  font-size: 16px;
 }
-
+@media screen and (min-width: 911px) {
+  html {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 910px) {
   html {
     font-size: 14px;
@@ -536,6 +539,8 @@ p {
 
 #legacy-navbar .social-media svg {
   height: 20px;
+  fill: #fff;
+  transition: 1s;
 }
 
 #legacy-navbar.show #wordpress-icon {
@@ -556,11 +561,6 @@ p {
 
 #legacy-navbar.show #linkedin-icon {
   fill: #0077B7;
-}
-
-#legacy-navbar .social-media svg {
-  fill: #fff;
-  transition: 1s;
 }
 
 #legacy-navbar a {

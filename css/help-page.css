@@ -4,20 +4,25 @@ body {
   width: 100%;
   position: relative;
   font-family: 'Merriweather', serif;
-  font-size: 16px;
 }
 
+@media screen and (min-width: 911px) {
+  html {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 910px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @media screen and (max-width: 550px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
+
 
 *,
 *:before,
@@ -31,6 +36,13 @@ a:hover {
 
 p {
   margin: 0;
+}
+
+.clearfix:after {
+  /* use on parent container of floated items */
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
@@ -98,7 +110,6 @@ p {
   background-position: center;
   -webkit-transition: background .5s;
   transition: background .5s;
-  ß
 }
 
 #legacy-navbar .legacy-mobile-on-button {
@@ -170,9 +181,10 @@ p {
   float: right;
 }
 
-#legacy-navbar .social-media img {
+#legacy-navbar .social-media svg {
   height: 20px;
-  vertical-align: middle;
+  fill: #fff;
+  transition: 1s;
 }
 
 #legacy-navbar a {
@@ -243,6 +255,7 @@ p {
   }
   #legacy-navbar .legacy-sections .mail-icon svg {
     height: 50px;
+    fill: #fff;
   }
   #legacy-navbar .legacy-navbar-links .social-media {
     width: 275px;
@@ -252,7 +265,7 @@ p {
     right: 0;
     margin: auto;
   }
-  #legacy-navbar .legacy-navbar-links .social-media img {
+  #legacy-navbar .legacy-navbar-links .social-media svg {
     height: 40px;
   }
 }
@@ -268,42 +281,45 @@ p {
 
 
 /*
-* --------------------
-*     Help Page Section
-* --------------------
+* ----------------
+*     Help Page 
+* ----------------
 */
 
-.container {
+#help-page {
+  width: 100%;
   background-image: url("./../assets/Background-1.jpg");
-}
-
-.white-waves {
-  background: #fff;
-  width: 60%;
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 10px;
-  font-size: 20px;
-  padding-top: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container h1 {
   color: #1775BF;
   text-align: center;
+  font-size: 4rem;
   padding-top: 100px;
-  font-size: 50px;
-  margin-bottom: -20px;
+  margin: 0;
 }
 
 .container h4 {
   color: #1775BF;
   text-align: center;
-  font-size: 22px;
+  font-size: 1.2rem;
+  padding: 0 15px;
 }
 
-.topic-contents a {
-  text-decoration: none;
-  font-size: 23px;
+.help-content {
+  background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.topic-contents p,
+.topic-contents p a {
+  font-size: 1.3rem;
   color: black;
 }
 
@@ -314,7 +330,6 @@ p {
 .clear {
   text-align: right;
   padding-right: 20px;
-  font-size: 15px;
   text-decoration: none;
 }
 
@@ -324,37 +339,18 @@ p {
   font-weight: 550;
 }
 
-.help-contents {
-  text-decoration: none;
-}
-
 .content-info {
   padding-top: 50px;
 }
 
 @media screen and (max-width: 600px) {
-  .white-waves {
-    background: #fff;
+  .help-content {
     width: 90%;
     margin: 0 auto;
     text-align: left;
-    font-size: 9px;
-  }
-  .container h1 {
-    color: #1775BF;
-    text-align: center;
-    padding-top: 55px;
-    font-size: 20px;
-    margin-bottom: -10px;
-  }
-  .container h4 {
-    color: #1775BF;
-    text-align: center;
-    font-size: 8px;
   }
   .topic-contents a {
     text-decoration: none;
-    font-size: 9px;
     color: black;
   }
   .topic-contents a:hover {
@@ -363,36 +359,22 @@ p {
   .clear {
     text-align: right;
     padding-right: 10px;
-    font-size: 7px;
-    text-decoration: none;
-  }
-  .clear a {
-    text-decoration: none;
-    color: #007DA6;
-    font-weight: 550;
-  }
-  .help-contents {
     text-decoration: none;
   }
   .content-info {
     padding-top: 25px;
-  }
-  footer p {
-    padding: 0em 3em;
-    font-size: 9px;
   }
 }
 
 
 /*
 * --------------------
-*     footer Section
+*     Footer Section
 * --------------------
 */
 
 footer {
   width: 100%;
-  height: 60px;
   background-color: #262932;
   bottom: 0;
   left: 0;
